@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Weather Dashboard
+    </title>
+</head>
+<body class="container">
+    
+    <div class="card bg-light mb-3" style="max-width: 80rem"  >
+        <div class="card-header" id = "titleHeader"><h2>Weather Dashboard</h2></div>
+        
+        <div class="card-body" style="max-width: 20rem">
+          <h5 class="card-title">Search for a City:</h5>
+          <input type="text" class="form-control" id = "citySearch"  placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+            </div> 
+        </div>
+
+        <div class="card" style="max-width: 20rem" id="currentDay" >
+            <div class="card-body">
+              <h2 class="card-title" id="cityName"></h2>
+              <h4 class="card-subtitle mb-2 text-muted" id="currentDate">Today:</h4>
+              <p class="card-text" id="temp">Temperature:</p>
+              <p class="card-text" id="humid">Humidity:</p>
+              <p class="card-text" id="windSpeed">Wind Speed:</p>
+              <p class="card-text" id="uvIndex">UV Index:</p>
+            </div>
+          </div>  
+        
+        <ul class="list-group" style="max-width: 20rem">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+        
+    </div>
+
+    
+
+      
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</html>
