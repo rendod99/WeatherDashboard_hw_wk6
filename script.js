@@ -1,4 +1,20 @@
-$("button").on("click", function(){
+function renderLastCity() {
+    var city = localStorage.getItem("city");
+    
+  
+    $("#city1").text(city); 
+   
+  }
+
+
+$("button").on("click", function(event){
+    event.preventDefault();
+    var citySearch= $("#citySearch").val();
+      localStorage.setItem("city", citySearch);
+      renderLastCity()
+
+      
+
 // API call for returning Current Weather
 var city = $("#citySearch").val();
 
@@ -31,7 +47,16 @@ var city = $("#citySearch").val();
             }).then(function(response) {
                 console.log(response);
                 $("#uvIndex").text("UV Index: "+response.value);
-                //$("#currentDate").html("<h4>"+response.date_iso +"</h4>")
+
+                if(response.value >= 8.0){
+                    $("#uvIndex").addClass("uvColorHigh");
+                }else if(response.value <= 4.0){
+                    $("#uvIndex").addClass("uvColorlow")
+                }else{
+                    $("#uvIndex").addClass("uvColorMed")
+                }
+                
+                //$("#currentDate").html("<h4>Today: "+response.weqther.main +"</h4>")
 
             });
 
@@ -105,8 +130,6 @@ var city = $("#citySearch").val();
             });
       });
       
-      
-
 
     });   
 

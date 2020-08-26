@@ -12,4 +12,23 @@
     margin-left:20px;
    margin-top:20px;
 }
+.uvColorHigh{
+    background:red;
+   color:white;
+   max-width: 100px;
 
+}
+
+.uvColorMed{
+    background:orange;
+   color:white;
+   max-width: 100px;
+
+}
+
+.uvColorlow{
+    background:green;
+   color:white;
+   max-width: 100px;
+
+}
