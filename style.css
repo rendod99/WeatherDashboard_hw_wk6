@@ -16,6 +16,8 @@
     background:red;
    color:white;
    max-width: 100px;
+   padding:10px;
+   border-radius: 10px;
 
 }
 
@@ -23,6 +25,9 @@
     background:orange;
    color:white;
    max-width: 100px;
+   padding:10px;
+   border-radius: 10px;
+
 
 }
 
@@ -30,5 +35,26 @@
     background:green;
    color:white;
    max-width: 100px;
+   padding:10px;
+   border-radius: 10px;
 
 }
+
+#titleHeader{
+    background:blue;
+    color:white;
+}
+
+.cardColor{
+    background:blue;
+    color:white;
+    border-radius: 25px;
+}
+
+.cardMargin{
+    
+    margin:10px;
+    
+}
+
+

@@ -1,13 +1,14 @@
 function renderLastCity() {
     var city = localStorage.getItem("city");
     
+    var cityElement = `<li class="list-group-item">${city}</li>`;
   
-    $("#city1").text(city); 
+    $(".cities").prepend(cityElement); 
    
   }
 
 
-$("button").on("click", function(event){
+$("#button").on("click", function(event){
     event.preventDefault();
     var citySearch= $("#citySearch").val();
       localStorage.setItem("city", citySearch);
@@ -28,6 +29,11 @@ var city = $("#citySearch").val();
             $("#cityName").text(response.name);
             $("#windSpeed").text("Wind Speed: " + response.wind.speed + " MPH");
             $("#humid").text("Humidity: " + response.main.humidity + "%");
+            //$("#icon1").JSON.parse(response.weather[0].icon);
+            var iconCode = response.weather[0].icon;
+            var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
+            $("#currentDate").prepend("Today: "+"<img src='" + iconUrl  + "'>");
+            
         
             // Convert the temp to fahrenheit
             var tempF = (response.main.temp - 273.15) * 1.80 + 32;
@@ -47,7 +53,7 @@ var city = $("#citySearch").val();
             }).then(function(response) {
                 console.log(response);
                 $("#uvIndex").text("UV Index: "+response.value);
-
+                
                 if(response.value >= 8.0){
                     $("#uvIndex").addClass("uvColorHigh");
                 }else if(response.value <= 4.0){
@@ -66,6 +72,7 @@ var city = $("#citySearch").val();
                 url: queryURL3,
                 method: "GET"
             }).then(function(response) {
+                console.log(response);
                 console.log(response.list[3].dt_txt);
                 $("#date1").text(response.list[3].dt_txt);
                 
@@ -77,6 +84,10 @@ var city = $("#citySearch").val();
                 console.log(response.list[3].main.humidity);
                 $("#humid1").text(response.list[3].main.humidity+"%");
 
+                console.log(response.list[3].weather[0].icon);
+                $("#symbol1").html("<img src='https://openweathermap.org/img/w/" + response.list[3].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+
+
                 
                 console.log(response.list[11].dt_txt);
                 $("#date2").text(response.list[11].dt_txt);
@@ -87,7 +98,10 @@ var city = $("#citySearch").val();
                 $("#temp2").text("Temp: (F) " + tempF.toFixed(2));
                 
                 console.log(response.list[11].main.humidity);
-                $("#humid2").text(response.list[11].main.humidity+"%");
+                $("#humid2").text("Humidity: "+response.list[11].main.humidity+"%");
+
+                console.log(response.list[11].weather[0].icon);
+                $("#symbol2").html("<img src='https://openweathermap.org/img/w/" + response.list[11].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
 
                 console.log(response.list[18].dt_txt);
@@ -99,7 +113,10 @@ var city = $("#citySearch").val();
                 $("#temp3").text("Temp: (F) " + tempF.toFixed(2));
                 
                 console.log(response.list[18].main.humidity);
-                $("#humid3").text(response.list[18].main.humidity+"%");
+                $("#humid3").text("Humidity: "+response.list[18].main.humidity+"%");
+
+                console.log(response.list[18].weather[0].icon);
+                $("#symbol3").html("<img src='https://openweathermap.org/img/w/" + response.list[18].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
 
                 console.log(response.list[26].dt_txt);
@@ -111,7 +128,10 @@ var city = $("#citySearch").val();
                 $("#temp4").text("Temp: (F) " + tempF.toFixed(2));
                 
                 console.log(response.list[26].main.humidity);
-                $("#humid4").text(response.list[26].main.humidity+"%");
+                $("#humid4").text("Humidity: "+response.list[26].main.humidity+"%");
+
+                console.log(response.list[26].weather[0].icon);
+                $("#symbol4").html("<img src='https://openweathermap.org/img/w/" + response.list[26].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
 
                 console.log(response.list[34].dt_txt);
@@ -123,7 +143,10 @@ var city = $("#citySearch").val();
                 $("#temp5").text("Temp: (F) " + tempF.toFixed(2));
                 
                 console.log(response.list[34].main.humidity);
-                $("#humid5").text(response.list[34].main.humidity+"%");
+                $("#humid5").text("Humidity: "+response.list[34].main.humidity+"%");
+
+                console.log(response.list[34].weather[0].icon);
+                $("#symbol5").html("<img src='https://openweathermap.org/img/w/" + response.list[34].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
                 
 

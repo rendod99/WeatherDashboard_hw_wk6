@@ -11,20 +11,20 @@
 <body class="container">
     
     <div class="card bg-light mb-3" style="max-width: 80rem"  >
-        <div class="card-header" id = "titleHeader"><h2>Weather Dashboard</h2></div>
+        <div class="card-header" id = "titleHeader"><h1>Weather Dashboard</h1></div>
         
         <div class="card-body" style="max-width: 20rem">
           <h5 class="card-title">Search for a City:</h5>
           <input type="text" class="form-control" id = "citySearch"  placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+              <input class="btn btn-primary" type="submit" value="Check Weather" id="button">
             </div> 
         </div>
 
         <div class="card" style="max-width: 20rem" id="currentDay" >
-            <div class="card-body">
+            <div class="card-body" id="icon1">
               <h2 class="card-title" id="cityName"></h2>
-              <h4 class="card-subtitle mb-2 text-muted" id="currentDate">Today:</h4>
+              <h4 class="card-subtitle mb-2 text-muted" id="currentDate"></h4>
               <p class="card-text" id="temp">Temperature:</p>
               <p class="card-text" id="humid">Humidity:</p>
               <p class="card-text" id="windSpeed">Wind Speed:</p>
@@ -32,63 +32,49 @@
             </div>
           </div>  
         
-        <ul class="list-group" style="max-width: 20rem">
-            <li class="list-group-item" id="city1">Cras justo odio</li>
-            <li class="list-group-item" id="city2">Dapibus ac facilisis in</li>
-            <li class="list-group-item" id="city3">Morbi leo risus</li>
-            <li class="list-group-item" id="city4">Porta ac consectetur ac</li>
-            <li class="list-group-item" id="city5">Vestibulum at eros</li>
+        <ul class="list-group cities" style="max-width: 20rem">
+            
         </ul>
 
         <div class="card-group">
-          <div class="card">
-            <div class="card-body">
+          <div class="card cardMargin">
+            <div class="card-body cardColor" >
               <h5 class="card-title" id="date1">Date</h5>
               <p class="card-text" id="temp1">temperature</p>
               <p class="card-text" id="humid1">humidity</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">symbol</small>
+              <p class="card-text" id="symbol1">symbol</p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
+          <div class="card cardMargin">
+            <div class="card-body cardColor">
               <h5 class="card-title" id="date2">Date</h5>
               <p class="card-text" id="temp2">temperature</p>
               <p class="card-text" id="humid2">humidity</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">symbol</small>
+              <p class="card-text" id="symbol2">symbol</p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
+          <div class="card cardMargin">
+            <div class="card-body cardColor">
               <h5 class="card-title" id="date3">Date</h5>
               <p class="card-text" id="temp3">temperature</p>
               <p class="card-text" id="humid3">humidity</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">symbol</small>
+              <p class="card-text" id="symbol3">symbol</p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
+          <div class="card cardMargin">
+            <div class="card-body cardColor">
               <h5 class="card-title" id="date4">Date</h5>
               <p class="card-text" id="temp4">temperature</p>
               <p class="card-text" id="humid4">humidity</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">symbol</small>
+              <p class="card-text" id="symbol4">symbol</p>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
+          <div class="card cardMargin">
+            <div class="card-body cardColor">
               <h5 class="card-title" id="date5">Date</h5>
               <p class="card-text" id="temp5">temperature</p>
               <p class="card-text" id="humid5">humidity</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">symbol</small>
+              <p class="card-text" id="symbol5">symbol</p>
             </div>
           </div>
         </div>
