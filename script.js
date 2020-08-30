@@ -1,14 +1,12 @@
 
-    //pull city from local storage
+    //pull city from local storage and prepend to DOM
     function renderLastCity() {
     var city = localStorage.getItem("city");
-    
     var cityElement = `<li class="list-group-item">${city}</li>`;
-    
-    //prepend city to recentlly searched
     $(".cities").prepend(cityElement)}
-    var counter=0
+    
     //counter to limit recentlly searched cities
+    var counter=0
     function addCounter(){
         
         
