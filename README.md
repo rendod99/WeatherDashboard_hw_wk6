@@ -15,3 +15,5 @@ https://github.com/rendod99/WeatherDashboard_hw_wk6
 
 Link to Live Website:
  https://rendod99.github.io/WeatherDashboard_hw_wk6/
+
+<img width="1680" alt="weather_dashboard" src="https://user-images.githubusercontent.com/66277385/93031745-d99c2080-f5f2-11ea-9542-77fe6238bb97.png">
