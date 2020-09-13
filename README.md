@@ -5,6 +5,11 @@ Along with the current weather display the application will also show a 5 day fo
 
 The application will also display the 5 most recent cities the user has searched.
 
+Technologies used:
+css/Bootstrap
+Javascript/Jquery
+Open Weather API
+
 link to GitHub repository:
 https://github.com/rendod99/WeatherDashboard_hw_wk6
 
